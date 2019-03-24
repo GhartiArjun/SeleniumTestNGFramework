@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="9746" started-at="2019-03-15T20:37:44Z" finished-at="2019-03-15T20:37:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="9746" started-at="2019-03-15T20:37:44Z" finished-at="2019-03-15T20:37:54Z">
+      <class name="com.functionalautomation.testcases.HomePageElementPresent">
+        <test-method status="PASS" signature="elementPresentVerification()[pri:0, instance:com.functionalautomation.testcases.HomePageElementPresent@91161c7]" name="elementPresentVerification" duration-ms="9726" started-at="2019-03-15T20:37:44Z" finished-at="2019-03-15T20:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- elementPresentVerification -->
+      </class> <!-- com.functionalautomation.testcases.HomePageElementPresent -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
