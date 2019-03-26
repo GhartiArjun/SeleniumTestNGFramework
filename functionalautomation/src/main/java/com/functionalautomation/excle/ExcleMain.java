@@ -136,18 +136,4 @@ public class ExcleMain {
 		}
 	}
 
-	public static void main(String[] args) throws IOException {
-		ExcleMain main = new ExcleMain();
-		//main.getValueFromExcle();
-		// main.readExcle("sample");
-		//String[][] values = main.readExcle("sample");
-		//System.out.println(values[0][1]);
-		//main.writeExcel("sample");
-		//System.out.println("msg " + fromexcel[1][1]);
-		main.writeExcel("sample","PASS");
-		
-	}
-	
-	
-
 }
