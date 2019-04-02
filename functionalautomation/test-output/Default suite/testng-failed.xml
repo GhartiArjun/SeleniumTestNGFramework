@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.functionalautomation.testcases.HomePageElementPresent">
+      <class name="com.functionalautomation.testcases.LogInverification">
         <methods>
-          <include name="elementPresentVerification"/>
+          <include name="loginVerification"/>
+          <include name="testSetup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.functionalautomation.testcases.HomePageElementPresent -->
+      </class> <!-- com.functionalautomation.testcases.LogInverification -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9746" started-at="2019-03-15T20:37:44Z" finished-at="2019-03-15T20:37:54Z">
+  <suite name="Default suite" duration-ms="9957" started-at="2019-04-02T04:00:04Z" finished-at="2019-04-02T04:00:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9746" started-at="2019-03-15T20:37:44Z" finished-at="2019-03-15T20:37:54Z">
-      <class name="com.functionalautomation.testcases.HomePageElementPresent">
-        <test-method status="PASS" signature="elementPresentVerification()[pri:0, instance:com.functionalautomation.testcases.HomePageElementPresent@91161c7]" name="elementPresentVerification" duration-ms="9726" started-at="2019-03-15T20:37:44Z" finished-at="2019-03-15T20:37:54Z">
+    <test name="Default test" duration-ms="9957" started-at="2019-04-02T04:00:04Z" finished-at="2019-04-02T04:00:14Z">
+      <class name="com.functionalautomation.testcases.LogInverification">
+        <test-method status="PASS" signature="testSetup()[pri:0, instance:com.functionalautomation.testcases.LogInverification@53b32d7]" name="testSetup" is-config="true" duration-ms="5128" started-at="2019-04-02T04:00:04Z" finished-at="2019-04-02T04:00:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- elementPresentVerification -->
-      </class> <!-- com.functionalautomation.testcases.HomePageElementPresent -->
+        </test-method> <!-- testSetup -->
+        <test-method status="PASS" signature="loginVerification(java.lang.String, java.lang.String)[pri:0, instance:com.functionalautomation.testcases.LogInverification@53b32d7]" name="loginVerification" duration-ms="1715" started-at="2019-04-02T04:00:09Z" data-provider="loginData" finished-at="2019-04-02T04:00:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sumi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerification -->
+        <test-method status="PASS" signature="loginVerification(java.lang.String, java.lang.String)[pri:0, instance:com.functionalautomation.testcases.LogInverification@53b32d7]" name="loginVerification" duration-ms="1427" started-at="2019-04-02T04:00:11Z" data-provider="loginData" finished-at="2019-04-02T04:00:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[arju]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ghar]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerification -->
+        <test-method status="PASS" signature="loginVerification(java.lang.String, java.lang.String)[pri:0, instance:com.functionalautomation.testcases.LogInverification@53b32d7]" name="loginVerification" duration-ms="1377" started-at="2019-04-02T04:00:12Z" data-provider="loginData" finished-at="2019-04-02T04:00:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[grg]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.functionalautomation.testcases.LogInverification@53b32d7]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-04-02T04:00:14Z" finished-at="2019-04-02T04:00:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.functionalautomation.testcases.LogInverification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

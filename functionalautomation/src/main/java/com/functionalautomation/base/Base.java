@@ -25,7 +25,7 @@ public class Base {
 	private FileInputStream fileinput;
 	private static Properties prop;
 
-	private void loadPropertiesFiles(){
+	public void loadPropertiesFiles(){
 		prop = new Properties();
 		try {
 		fileinput = new FileInputStream(new File("./src/main/java/com/functionalautomation/config/config.properties"));
@@ -36,7 +36,7 @@ public class Base {
 		}
 	}
 
-	private void loadBrowser(String browserName) {
+	public void loadBrowser(String browserName) {
 		if (System.getProperty("os.name").contains("Windows")) {
 			if (browserName.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();

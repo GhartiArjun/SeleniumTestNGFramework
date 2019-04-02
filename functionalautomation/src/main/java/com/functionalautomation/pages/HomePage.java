@@ -1,5 +1,7 @@
 package com.functionalautomation.pages;
 
+import org.apache.logging.log4j.core.util.Assert;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,6 +36,12 @@ public class HomePage {
 	
 	public void logInButtonPresent() {
 		if (logInButton.isDisplayed()) {
+			System.out.println( "element present.");
+		}else System.out.println( "no such element found");
+	}
+	
+	public void contactLinkPresent() {
+		if (contactUsButton.isDisplayed()) {
 			System.out.println( "element present.");
 		}else System.out.println( "no such element found");
 	}
