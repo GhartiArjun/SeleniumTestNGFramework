@@ -2,6 +2,7 @@ package com.functionalautomation.base;
 
 import java.io.File;
 
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -21,22 +22,30 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 
-	protected static WebDriver driver;
+	public  WebDriver driver;
 	private FileInputStream fileinput;
-	private static Properties prop;
+	private Properties prop;
 
-	public void loadPropertiesFiles(){
+	public String loadPropertiesFiles(String keyName){
 		prop = new Properties();
 		try {
-		fileinput = new FileInputStream(new File("./src/main/java/com/functionalautomation/config/config.properties"));
+		fileinput = new FileInputStream(("./src/main/java/com/functionalautomation/config/config.properties"));
 		prop.load(fileinput);
-		// return prop.getProperty(propertyKeyName);
+		if(keyName.equalsIgnoreCase("browser")) { 
+			return prop.getProperty("browser");
+		}
+		if(keyName.equalsIgnoreCase("url")) {
+			return prop.getProperty("url");
+		}
+		
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+		return "can't find matching key.";
 	}
 
-	public void loadBrowser(String browserName) {
+	public void loadBrowser() {
+		String browserName =loadPropertiesFiles("browser");
 		if (System.getProperty("os.name").contains("Windows")) {
 			if (browserName.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
@@ -62,7 +71,7 @@ public class Base {
 		}
 	}
 
-	private void captureScreenShots(String screenShotName) {
+	public void captureScreenShots(String screenShotName) {
 		
 		String loc = "./src/main/java/com/functionalautomation/screenshots/";
 		File image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -78,25 +87,20 @@ public class Base {
 
 	}
 
-	public void getScreenShots(String name) {
-		Base base = new Base();
-		base.captureScreenShots(name);
-
-	}
-
+	
+/*
 	public void getBrowser(String browserName){
 		Base base = new Base();
 		base.loadPropertiesFiles();
 		base.loadBrowser(browserName);
 		driver.get(prop.getProperty("url"));
 
-	}
+	}*/
 
-	public static void main(String[] args){
-		Base base = new Base();
-		base.getBrowser("chrome");
-		base.captureScreenShots("test");
-
-	}
+public static void main(String[] args) {
+	Base base = new Base();
+	base.loadPropertiesFiles("browser");
+	System.out.println(base.loadPropertiesFiles("page"));
+}
 
 }
